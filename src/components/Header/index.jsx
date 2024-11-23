@@ -33,12 +33,16 @@ export default function Header() {
       </div>
 
       <div className="flex-1 flex justify-end gap-x-4">
-        <button className="btn p-2 border rounded-md bg-zinc-200 text-zinc-900">
-          Signin
-        </button>
-        <button className="btn p-2 border rounded-md bg-zinc-200 text-zinc-900">
-          Signup
-        </button>
+        <Link to="/signin">
+          <button className="btn p-2 border rounded-md bg-zinc-200 text-zinc-900">
+            Signin
+          </button>
+        </Link>
+        <Link to="/signup">
+          <button className="btn p-2 border rounded-md bg-zinc-200 text-zinc-900">
+            Signup
+          </button>
+        </Link>
       </div>
     </header>
   );
