@@ -12,7 +12,7 @@ export function ProvideAuth({ children }) {
     async function fetchData() {
       if (!user) {
         try {
-          const { data } = await axios.get("/api/users/");
+          const { data } = await axios.get("/api/auth/");
           console.log("AUTH USER DATA: ", data);
           setUser(data.user);
           // setIsFetching(false);

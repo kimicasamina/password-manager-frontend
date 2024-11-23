@@ -5,7 +5,7 @@ export default function Signin() {
   return (
     <div className="w-full max-w-[70%] mx-auto flex flex-col pt-14">
       <h1 className="mb-10 text-2xl font-semibold text-center">
-        Create a new User
+        Login to your Account
       </h1>
       <form className="flex flex-col gap-y-10">
         {/* <div className="w-full flex flex-col gap-y-2">
@@ -40,7 +40,7 @@ export default function Signin() {
         </div>
 
         <span className="text-sm mt-10">
-          Already have an account?
+          Don't have an account?
           <Link to="/signup" className="px-2 text-blue-600">
             Sign up
           </Link>
