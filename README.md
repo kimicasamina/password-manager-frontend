@@ -1,8 +1,17 @@
-# React + Vite
+# Password Manager Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [x] Configure tailwindcss
+- [x] Home page
+- [x] Signin Page
+- [x] Signup Page
+- [] Settings Page
+- [x] Routes
+- [x] Layout for guess and profile layout
+- [x] Signing in (Submit request to the server)
+- [x] Signing up
+- [] Form validation (signin and signup)
+- [x] Implement jwt authentication
+- [x] Header. (Displays username if user is authenticated)
+- [] Display list of password
+- [] Pull up list of logo image
+- [] Hide .env files
