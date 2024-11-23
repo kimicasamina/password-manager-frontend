@@ -4,9 +4,9 @@ import Header from "../components/Header";
 
 export default function GuessLayout() {
   return (
-    <div className="w-full max-w-[1280px] mx-auto h-screen bg-zinc-200 flex flex-col justify-between">
+    <div className="w-full max-w-[1280px] mx-auto h-screen bg-zinc-200 flex flex-col">
       <Header />
-      <main className="w-full flex-1 ">
+      <main className="w-full flex-1 overflow-hidden">
         <Outlet />
       </main>
     </div>
