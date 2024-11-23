@@ -19,7 +19,7 @@ export default defineConfig({
         target:
           process.env.VITE_MODE === "prod"
             ? process.env.VITE_PROD
-            : process.env.VITE_DEV,
+            : "http://localhost:9000",
       },
 
       "/admin": {
