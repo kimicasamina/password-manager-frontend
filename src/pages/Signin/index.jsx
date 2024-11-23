@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 
 export default function Signin() {
-  const { setUser } = useAuth();
-  const navigate = useNavigate();
+  const { user, isFetching, setUser } = useAuth();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
+  if (!isFetching && user) {
+    return <Navigate to="/" />;
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();

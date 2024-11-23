@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useAuth } from "../../context/auth";
 
 export default function Signup() {
-  const navigate = useNavigate();
+  const { user, isFetching, setUser } = useAuth();
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
     // confirmPassword: "",
   });
+
+  if (!isFetching && user) {
+    return <Navigate to="/" />;
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -20,7 +24,7 @@ export default function Signup() {
 
     try {
       const { data } = await axios.post("/api/auth/register/", { ...formData });
-      return navigate("/signin");
+      return <Navigate to="/signin" />;
     } catch (error) {
       console.log(error);
     }

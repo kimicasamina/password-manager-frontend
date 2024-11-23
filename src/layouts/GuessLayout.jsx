@@ -1,6 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
+import { useAuth } from "../context/auth";
+import { Navigate } from "react-router-dom";
 
 export default function GuessLayout() {
   return (
